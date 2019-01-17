@@ -15,7 +15,7 @@ export class UserService {
   }
 
   getUsers(){
-    return this.http.get('http://localhost:3000/api/users');
+    return this.http.get('http://localhost:3000/api/emp');
   }
 
 }

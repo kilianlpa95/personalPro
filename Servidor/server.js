@@ -10,7 +10,8 @@ var fs = require('fs');
 //var authController = require('./controllers/auth');
 
 // Connect to the users MongoDB
-mongoose.connect('mongodb://localhost:27017/users');
+//mongoose.connect('mongodb://localhost:27017/users');
+mongoose.connect('mongodb://localhost:27017/emps');
 
 // Create our Express application
 var app = express();
@@ -38,7 +39,7 @@ app.use(function(req, res, next){
   /* Set the Http request header */
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Authorization');
     next();
-})
+});
 
 // Create our Express router
 var router = express.Router();

@@ -4,7 +4,7 @@ var Emp = require('../models/emp');
 // Create endpoint /api/emp for POSTS
 exports.postEmp = function(req, res) {
   // Create a new instance of the emp model
-  var emp = new UseEmpr();
+  var emp = new Emp();
 
   // Set the emp properties that came from the POST data
   emp.name = req.body.name;

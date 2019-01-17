@@ -5,14 +5,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from '../providers/user-service/user-service';
+import { ImageProvider } from '../providers/image/image';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ViewPage } from '../pages/view-emp/view-emp';
+import { ManagePage } from '../pages/manage-emp/manage-emp';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ViewPage,
+    ManagePage
   ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { HomePage } from '../pages/home/home';
     StatusBar,
     SplashScreen,
     UserService,
+    ImageProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
