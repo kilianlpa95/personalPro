@@ -27,20 +27,22 @@
             color="danger"
             (click)="deleteRecord(item)">Delete</button>
 
-
-         <button
+          <button
             ion-button
             color="secondary"
             (click)="updateRecord(item)">Update</button>
 
-
-         <button
-            ion-button
-            color="primary"
-            (click)="viewRecord(item)">View</button>
-       </ion-buttons>
+          <button
+              ion-button
+              color="primary"
+              (click)="viewRecord(item)">View</button>
+      </ion-buttons>
     </ion-item>
   </ion-list>
+        <button
+        ion-button
+        color="secondary"
+        (click)="addRecord(item)">Add</button>
 </ion-content>
 
 <!--ion-content padding>

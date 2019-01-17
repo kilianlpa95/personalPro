@@ -8,7 +8,7 @@ import {
    FormBuilder,
    FormGroup,
    Validators } from '@angular/forms';
-import { ImageProvider } from '../../providers/image/image';
+//import { ImageProvider } from '../../providers/image/image';
 
 
 @IonicPage({
@@ -37,7 +37,7 @@ export class ManagePage {
    			   private fb : FormBuilder,
    			   private http : HttpClient,
    			   private toast : ToastController,
-   			   private imageNail : ImageProvider)
+   			   /*private imageNail : ImageProvider*/)
    {
       this.form = this.fb.group({
          'name' : ['', Validators.required],
@@ -124,7 +124,7 @@ export class ManagePage {
       toast.present();
    }
    
-   takePhotograph() : void
+   /*takePhotograph() : void
    {
       this.imageNail
       .takePhotograph()
@@ -152,5 +152,5 @@ export class ManagePage {
       {
          console.log(err);
       });
-   }
+   }*/
 }

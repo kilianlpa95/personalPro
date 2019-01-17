@@ -52,10 +52,10 @@ exports.putEmp = function(req, res) {
       res.send(err);
 
     // Updating values
-        recs.name = req.body.name || recs.name;
-        recs.description = req.body.description || recs.description;
-        recs.thumbnail  = req.body.thumbnail || recs.thumbnail;
-        recs.displayed 	= req.body.displayed || recs.displayed;
+        emp.name = req.body.name || emp.name;
+        emp.description = req.body.description || emp.description;
+        emp.thumbnail  = req.body.thumbnail || emp.thumbnail;
+        emp.displayed 	= req.body.displayed || emp.displayed;
 
     // Save the emp and check for errors
     emp.save(function(err) {

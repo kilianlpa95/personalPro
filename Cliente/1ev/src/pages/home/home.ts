@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, ToastController } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ManagePage } from '../manage-emp/manage-emp';
+import { ViewPage } from '../view-emp/view-emp';
 //import { UserService } from '../../providers/user-service/user-service';
 
 /*@IonicPage({
@@ -50,15 +52,15 @@ export class HomePage {
   }
 
   updateRecord(item:any) : void {
-    this.navCtrl.push('manage-emp', { record : item });
+    this.navCtrl.push(ManagePage, { record : item });
   }
 
   addRecord() : void {
-    this.navCtrl.push('manage-emp');
+    this.navCtrl.push(ManagePage);
   }
 
   viewRecord(item:any) : void {
-    var modal = this.modal.create('view-emp', { record : item });
+    var modal = this.modal.create(ViewPage, { record : item });
     modal.present();
   }
 

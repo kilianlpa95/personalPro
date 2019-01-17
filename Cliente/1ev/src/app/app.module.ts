@@ -27,7 +27,9 @@ import { ManagePage } from '../pages/manage-emp/manage-emp';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ViewPage,
+    ManagePage
   ],
   providers: [
     StatusBar,
