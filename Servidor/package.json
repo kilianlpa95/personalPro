@@ -1,0 +1,31 @@
+{
+  "name": "1ev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "file-system": "^2.2.2",
+    "mongoose": "^5.4.0",
+    "multer": "^1.4.1",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilianlpa95/1ev.git"
+  },
+  "author": "Kilian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilianlpa95/1ev/issues"
+  },
+  "homepage": "https://github.com/kilianlpa95/1ev#readme"
+}
