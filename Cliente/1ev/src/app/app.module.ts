@@ -11,13 +11,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ViewPage } from '../pages/view-emp/view-emp';
 import { ManagePage } from '../pages/manage-emp/manage-emp';
+import { DeletePage } from '../pages/pages-delete/pages-delete';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ViewPage,
-    ManagePage
+    ManagePage,
+    DeletePage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { ManagePage } from '../pages/manage-emp/manage-emp';
     MyApp,
     HomePage,
     ViewPage,
-    ManagePage
+    ManagePage,
+    DeletePage
   ],
   providers: [
     StatusBar,

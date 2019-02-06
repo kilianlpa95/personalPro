@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { /*IonicPage,*/ ModalController, NavController, ToastController } from 'ionic-angular';
 import { HttpClient, /*HttpHeaders*/ } from '@angular/common/http';
-import { ManagePage } from '../manage-emp/manage-emp';
-import { ViewPage } from '../view-emp/view-emp';
-import { DeletePage } from '../pages-delete/pages-delete';
+import { HomePage } from '../home/home';
 //import { UserService } from '../../providers/user-service/user-service';
 
 /*@IonicPage({
@@ -11,10 +9,10 @@ import { DeletePage } from '../pages-delete/pages-delete';
 })*/
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'pages-delete',
+  templateUrl: 'pages-delete.html'
 })
-export class HomePage {
+export class DeletePage {
 
   public items : Array<any>;
 
@@ -53,19 +51,6 @@ export class HomePage {
     });
   }
 
-  updateRecord(item:any) : void {
-    this.navCtrl.push(ManagePage, { record : item });
-  }
-
-  addRecord() : void {
-    this.navCtrl.push(ManagePage);
-  }
-
-  viewRecord(item:any) : void {
-    var modal = this.modal.create(ViewPage, { record : item });
-    modal.present();
-  }
-
   displayNotification(message : string) : void{
     var toast = this.toast.create({
       message : message,
@@ -73,19 +58,7 @@ export class HomePage {
     });
   }
 
-  deleteTab(){
-    this.navCtrl.push(DeletePage);
+  homeTab(){
+    this.navCtrl.push(HomePage);
   }
-
-  /*ionViewDidLoad(){
-    this.userService.getUsers()
-    .subscribe(
-      (data) => { // Success
-        this.users = data;
-      },
-      (error) =>{
-        console.error(error);
-      }
-    )
-  }*/
 }

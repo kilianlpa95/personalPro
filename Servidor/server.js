@@ -6,7 +6,7 @@ var userController = require('./controllers/user');
 var loginController = require('./controllers/login');
 var empController = require('./controllers/emp');
 var passport = require('passport');
-var fs = require('fs');
+//var fs = require('fs');
 //var authController = require('./controllers/auth');
 
 // Connect to the users MongoDB
