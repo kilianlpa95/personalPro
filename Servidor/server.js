@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var userController = require('./controllers/user');
 var loginController = require('./controllers/login');
 var empController = require('./controllers/emp');
+var projectController = require('./controllers/project');
 var passport = require('passport');
 //var fs = require('fs');
 //var authController = require('./controllers/auth');
@@ -55,6 +56,17 @@ router.route('/emp/:emp_id')
   .put(/*authController.isAuthenticated,*/ empController.putEmp)
   .delete(/*authController.isAuthenticated,*/ empController.deleteEmp);
 
+// Endpoints Projects CRUD
+router.route('/project')
+  .get(/*authController.isAuthenticated,*/ projectController.getProjects)
+  .post(/*authController.isAuthenticated,*/ projectController.postProject)
+
+// Endpoints Projects CRUD
+router.route('/project/:project_id')
+  .get(/*authController.isAuthenticated,*/ projectController.getProject)
+  .put(/*authController.isAuthenticated,*/ projectController.putProject)
+  .delete(/*authController.isAuthenticated,*/ projectController.deleteProject);
+  
 // Create endpoint handlers for /users
 router.route('/users')
   .post(/*authController.isAuthenticated,*/ userController.postUsers)

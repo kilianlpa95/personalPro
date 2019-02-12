@@ -1,0 +1,69 @@
+<ion-header>
+   <ion-navbar>
+      <ion-title>
+         {{ pageTitle }}
+      </ion-title>
+   </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+   <p>{{ pageTitle }} project</p>
+
+   <form
+     [formGroup]="form"
+     (ngSubmit)="manageProject()">
+     <ion-list>
+         <ion-item margin-bottom>
+            <ion-label>Name</ion-label>
+            <ion-input
+               type="text"
+               [(ngModel)]="name"
+               formControlName="name"></ion-input>
+         </ion-item>
+
+         <ion-item margin-bottom>
+            <ion-label>Description</ion-label>
+            <ion-textarea
+               type="text"
+               [(ngModel)]="description"
+               formControlName="description"></ion-textarea>
+         </ion-item>
+
+        <ion-item-group>
+            <ion-item-divider color="light">Employees</ion-item-divider>
+
+            <ion-item margin-bottom>
+               <ion-label>All employees</ion-label>
+               <ion-textarea
+                  type="text"
+                  [(ngModel)]="employees"
+                  formControlName="employees"></ion-textarea>
+            </ion-item>
+         </ion-item-group>
+         <ion-item>
+            <ion-label>Select manager</ion-label>
+            <ion-select
+               [(ngModel)]="manager"
+               formControlName="manager">
+               <ion-option *ngFor="let item of items" value="{{ item.name }}">{{ item.name }}</ion-option>
+            </ion-select>
+         </ion-item>
+         <!--ion-item margin-bottom>
+            <ion-label>Select manager</ion-label>
+            <ion-select
+               [(ngModel)]="manager"
+               formControlName="manager">
+               <ion-option value="true">True</ion-option>
+            </ion-select>
+         </ion-item-->
+
+         <button
+            ion-button
+            color="primary"
+            text-center
+            block [disabled]="!form.valid">Save this record</button>
+      </ion-list>
+   </form>
+
+</ion-content>

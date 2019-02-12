@@ -4,6 +4,9 @@ import { HttpClient, /*HttpHeaders*/ } from '@angular/common/http';
 import { ManagePage } from '../manage-emp/manage-emp';
 import { ViewPage } from '../view-emp/view-emp';
 import { DeletePage } from '../pages-delete/pages-delete';
+import { ProjectHome } from '../projecthome/projecthome';
+import { HomePageTabs } from '../tabs/tabs';
+import { HomePageSlide } from '../slide/slide';
 //import { UserService } from '../../providers/user-service/user-service';
 
 /*@IonicPage({
@@ -75,6 +78,18 @@ export class HomePage {
 
   deleteTab(){
     this.navCtrl.push(DeletePage);
+  }
+
+  tabsTab(){
+    this.navCtrl.push(HomePageTabs);
+  }
+
+  slideTab(){
+    this.navCtrl.push(HomePageSlide);
+  }
+
+  projectTab(){
+    this.navCtrl.push(ProjectHome);
   }
 
   /*ionViewDidLoad(){

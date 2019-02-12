@@ -12,6 +12,12 @@ import { HomePage } from '../pages/home/home';
 import { ViewPage } from '../pages/view-emp/view-emp';
 import { ManagePage } from '../pages/manage-emp/manage-emp';
 import { DeletePage } from '../pages/pages-delete/pages-delete';
+import { ManageProjects } from '../pages/manage-project/manage-project';
+import { ProjectHome } from '../pages/projecthome/projecthome';
+import { DeleteProject } from '../pages/deletepr/deletepr';
+import { SuperTabsModule } from 'ionic2-super-tabs';
+import { HomePageTabs } from '../pages/tabs/tabs';
+import { HomePageSlide } from '../pages/slide/slide';
 
 @NgModule({
   declarations: [
@@ -19,12 +25,18 @@ import { DeletePage } from '../pages/pages-delete/pages-delete';
     HomePage,
     ViewPage,
     ManagePage,
-    DeletePage
+    DeletePage,
+    ManageProjects,
+    ProjectHome,
+    DeleteProject,
+    HomePageTabs,
+    HomePageSlide
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    SuperTabsModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,7 +44,12 @@ import { DeletePage } from '../pages/pages-delete/pages-delete';
     HomePage,
     ViewPage,
     ManagePage,
-    DeletePage
+    DeletePage,
+    ManageProjects,
+    ProjectHome,
+    DeleteProject,
+    HomePageTabs,
+    HomePageSlide
   ],
   providers: [
     StatusBar,

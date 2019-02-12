@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Employees
+    </ion-title>
+    <ion-buttons end>
+      <button
+         ion-button
+         block
+         color="primary"
+         (click)="addRecord()">Add</button>
+   </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<super-tabs toolbarBackgroud="primary" toolbarColor="light" indicartorColor="light" (tabSelect)="onTabSelect($event)">
+<super-tab [root]="ProjectHomet" [title]="1" id="page4"></super-tab>
+<super-tab [root]="Managepr" [title]="2" id="page5"></super-tab>
+<super-tab [root]="Deleteprt" [title]="3" id="page6"></super-tab>
+  </super-tabs>
+</ion-content>

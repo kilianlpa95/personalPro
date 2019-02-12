@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Employees
+    </ion-title>
+    <ion-buttons end>
+      <button
+         ion-button
+         block
+         color="primary"
+         (click)="addRecord()">Add</button>
+   </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides pager="true">
+      <ion-slide *ngFor="let item of items">
+          <h1>{{ item.name }}</h1>
+      </ion-slide>
+    </ion-slides>
+</ion-content>

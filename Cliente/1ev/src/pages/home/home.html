@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      1ev
+      Employees
     </ion-title>
     <ion-buttons end>
       <button
@@ -15,9 +15,6 @@
 
 <ion-content>
   <ion-list>
-
-
-
     <ion-item *ngFor="let item of items">
         <ion-avatar item-start>
           <!--img [src]="{{ item.thumbnail }}"-->
@@ -48,6 +45,21 @@
       ion-button
       color="secondary"
       (click)="addRecord(item)">Add</button>
+
+      <!--button
+      ion-button
+      color="primary"
+      (click)="projectTab()">Projects management</button-->
+
+      <button
+      ion-button
+      color="primary"
+      (click)="slideTab()">slide</button>
+
+      <button
+      ion-button
+      color="primary"
+      (click)="tabsTab()">Projects</button>
 
       <button
       ion-button
